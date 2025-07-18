@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Hero.css';
-import CriticareVideo from '../assets/videos/Criticare.mp4';
 
 const Hero = () => {
   return (
@@ -42,30 +41,22 @@ const Hero = () => {
           </div>
           <div className="hero-visual">
             <div className="hero-video">
-              <video 
+              <iframe 
                 className="hero-video-element"
-                autoPlay 
-                muted 
-                loop 
-                playsInline
-                poster="https://i.ibb.co/jZWTh4fp/hero-Img-1.png"
-              >
-                <source src={CriticareVideo} type="video/mp4" />
-                {/* Fallback to your existing image if video doesn't load */}
+                src="https://www.youtube.com/embed/IuEpMPcy1oQ?autoplay=1&mute=1&loop=1&playlist=IuEpMPcy1oQ&controls=0&showinfo=0&rel=0&modestbranding=1"
+                title="CritiCare Emergency Medical Equipment"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              
+              {/* Fallback image overlay for loading */}
+              <div className="video-loading-overlay">
                 <img 
                   src="https://i.ibb.co/jZWTh4fp/hero-Img-1.png" 
                   alt="Emergency medical professionals using CritiCare products"
                   className="hero-video-fallback"
                 />
-              </video>
-              
-              {/* Optional video controls */}
-              <div className="video-controls">
-                <button className="video-play-pause" aria-label="Play/Pause video">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </button>
               </div>
             </div>
           </div>
